@@ -248,6 +248,9 @@
   <div class="cap"><h3 id="lbTitle"></h3><span id="lbDate"></span><p id="lbDesc"></p></div>
 </div>
 
+<!-- BACKSOUND: simpan file musik di folder "audio" dengan nama backsound.mp3 -->
+<audio id="bgMusic" src="audio/backsound.mp3" loop preload="auto"></audio>
+
 <script>
 /* =====================================================
    ✏️  BAGIAN YANG PERLU KAMU UBAH
@@ -278,7 +281,7 @@ const PHOTOS = [
   { src:"foto/4.jpeg", title:"Bang Joni",           date:"12 Sept 2026", desc:"kalo kata orang-orang \"First Date\"." },
   { src:"foto/5.jpeg", title:"Movie Date",      date:"26 Sept 2026", desc:"Lucu bgt nyakk." },
   { src:"foto/6.jpeg", title:"Photobox",        date:"26 Sept 2026", desc:"aku dirangkul gesss." },
-  { src:"foto/7.jpeg", title:"Ramen1", date:"26 Sept 2026", desc:"Mamm Ramen (tapi ciyah ga abisin👎🏻)." },
+  { src:"foto/7.jpeg", title:"RamenOne", date:"26 Sept 2026", desc:"Mamm Ramen (tapi ciyah ga abisin👎🏻)." },
   { src:"foto/8.jpeg", title:"Ultah Ciyah",       date:"25 Oct 2026", desc:"Happy Birthday cayangg." },
   { src:"foto/9.jpeg", title:"Ciyah imup", date:"22 Oct 2026", desc:"bunga kicikk untuk orang kicikk." },
   { src:"foto/10.mp4", title:"Coloring", date:"10 Nov 2026", desc:"Fokus bgt nyak." },
@@ -411,6 +414,7 @@ $('openBtn').onclick = ()=>{
   $('cover').classList.add('hidden');
   $('albumWrap').classList.remove('hidden');
   render(0);
+  $('bgMusic').play().catch(()=>{});
 };
 $('homeBtn').onclick = ()=>{
   $('albumWrap').classList.add('hidden');
